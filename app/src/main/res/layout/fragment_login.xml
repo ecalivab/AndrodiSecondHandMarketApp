@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/logoutfields"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_100"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/icon1"
+            style="@style/ThemeOverlay.FirebaseIcon"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginHorizontal="50dp"
+            android:contentDescription="@string/desc_firebase_lockup"
+            android:src="@drawable/secondhands" />
+
+        <TextView
+            android:id="@+id/status1"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:layout_gravity="center"
+            android:text="Please Signout"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/detail1"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="0dp"
+            android:layout_weight="1.3"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp"
+            tools:text="Firebase User ID: 123456789abc" />
+
+
+
+        <Button
+            android:id="@+id/logoutbutton"
+            style="@style/ThemeOverlay.MyTextDetail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginBottom="100dp"
+            android:background="@drawable/rbshape"
+            android:gravity="center"
+            android:text="SIGN OUT"
+            android:textColor="#FBFBFB"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loginfields"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_100"
+        android:orientation="vertical"
+        android:visibility="visible"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icon"
+                style="@style/ThemeOverlay.FirebaseIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+
+                android:contentDescription="@string/desc_firebase_lockup"
+                android:src="@drawable/secondhands" />
+
+            <TextView
+                android:id="@+id/detail"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                tools:text="Firebase User ID: 123456789abc" />
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:text="Please Login"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/fieldEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:textColor="#070000"
+                android:textSize="24sp"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginVertical="20dp"
+                android:background="@drawable/rtshape"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress"
+                android:gravity="left|center_vertical"/>
+
+            <EditText
+                android:id="@+id/fieldPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:hint="@string/hint_password"
+                android:textColor="#070000"
+                android:textSize="24sp"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/rtshape"
+                android:inputType="textPassword"
+                android:gravity="left|center_vertical"/>
+
+
+            <Button
+                android:id="@+id/emailSignInButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="0.1"
+                android:background="@drawable/rbshape"
+                android:text="log in"
+                android:textColor="#FBFBFB"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/emailCreateAccountButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="0.1"
+                android:background="@drawable/rbshape"
+                android:text="sign up"
+                android:textColor="#FBFBFB"
+                android:textSize="18sp" />
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

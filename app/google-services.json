@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1076128505671",
+    "firebase_url": "https://madexploits-89f75.firebaseio.com",
+    "project_id": "madexploits-89f75",
+    "storage_bucket": "madexploits-89f75.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1076128505671:android:ee1752ce6deaf437c13662",
+        "android_client_info": {
+          "package_name": "com.example.lab02_exploits"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1076128505671-bfjqffo1pakj8u9k2kn2iin317rg4ipv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lab02_exploits",
+            "certificate_hash": "79aa5bc4d2d80cb8dcc040a1c685e9b067267ee7"
+          }
+        },
+        {
+          "client_id": "1076128505671-3t6bfpovg13g8c2i1joiv30lbu22v7iq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtAFWk__l5N-FBIrglUforhCDGPic4i0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1076128505671-3t6bfpovg13g8c2i1joiv30lbu22v7iq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

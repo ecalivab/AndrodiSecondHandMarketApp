@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_buyitemList">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.lab02_exploits.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/nav_home_second" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_home_second"
+        android:name="com.example.lab02_exploits.ui.home.HomeSecondFragment"
+        android:label="@string/home_second"
+        tools:layout="@layout/fragment_home_second">
+        <action
+            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.lab02_exploits.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.lab02_exploits.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_itemList"
+        android:name="com.example.lab02_exploits.ui.itemList.ItemListFragment"
+        android:label="My Items"
+        tools:layout="@layout/fragment_item_list">
+        <action
+            android:id="@+id/action_nav_itemList_to_itemDetailsFragment"
+            app:destination="@id/nav_itemDetails"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_itemList_to_editDetailsFragment"
+            app:destination="@id/nav_itemEdit"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_itemDetails"
+        android:name="com.example.lab02_exploits.ui.itemDetail.ItemDetailsFragment"
+        android:label="ItemDetails">
+        <action
+            android:id="@+id/action_itemDetailsFragment_to_nav_itemList"
+            app:destination="@id/nav_itemList"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_nav_itemDetails_to_nav_itemEdit"
+            app:destination="@id/nav_itemEdit" />
+        <action
+            android:id="@+id/action_nav_itemDetails_to_nav_showProfile"
+            app:destination="@id/nav_showProfile" />
+        <action
+            android:id="@+id/action_nav_itemDetails_to_nav_buyitemList"
+            app:destination="@id/nav_buyitemList" />
+        <action
+            android:id="@+id/action_nav_itemDetails_to_nav_mapDirections"
+            app:destination="@id/nav_mapDirections" />
+        <action
+            android:id="@+id/action_nav_itemDetails_to_nav_interestedItemList"
+            app:destination="@id/nav_interestedItemList" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_showProfile"
+        android:name="com.example.lab02_exploits.ui.showProfile.ShowProfileFragment"
+        android:label="User Profile">
+        <action
+            android:id="@+id/action_nav_showProfile_to_nav_editProfile"
+            app:destination="@id/nav_editProfile"
+            app:exitAnim="@anim/fragment_close_enter" />
+        <action
+            android:id="@+id/action_nav_showProfile_to_nav_signInFragment"
+            app:destination="@id/nav_signInFragment" />
+        <action
+            android:id="@+id/action_nav_showProfile_to_nav_buyitemList"
+            app:destination="@id/nav_buyitemList" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_editProfile"
+        android:name="com.example.lab02_exploits.ui.editProfile.EditProfileFragment"
+        android:label="EditProfile">
+        <action
+            android:id="@+id/action_nav_editProfile_to_nav_showProfile"
+            app:destination="@id/nav_showProfile"
+            app:exitAnim="@anim/fragment_fade_enter" />
+        <action
+            android:id="@+id/action_nav_editProfile_to_nav_maps"
+            app:destination="@id/nav_maps" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_itemEdit"
+        android:name="com.example.lab02_exploits.ui.itemEdit.ItemEditFragment"
+        android:label="EditItem">
+        <action
+            android:id="@+id/action_nav_itemEdit_to_nav_itemList"
+            app:destination="@id/nav_itemList"
+            app:exitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_nav_itemEdit_to_nav_buyitemList"
+            app:destination="@id/nav_buyitemList" />
+        <action
+            android:id="@+id/action_nav_itemEdit_to_nav_map_item"
+            app:destination="@id/nav_map_item"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_nav_itemEdit_to_nav_interestedItemList"
+            app:destination="@id/nav_interestedItemList" />
+        <action
+            android:id="@+id/action_nav_itemEdit_to_nav_itemDetails"
+            app:destination="@id/nav_itemDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_signInFragment"
+        android:name="com.example.lab02_exploits.ui.signIn.SignInFragment"
+        android:label="SignInFragment" >
+        <action
+            android:id="@+id/action_signInFragment_to_nav_editProfile"
+            app:destination="@id/nav_editProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_buyitemList"
+        android:name="com.example.lab02_exploits.ui.buyItemList.BuyItemListFragment"
+        android:label="Items On Sale"
+        tools:layout="@layout/fragment_buy_item_list">
+        <action
+            android:id="@+id/action_nav_buyitemList_to_nav_itemEdit"
+            app:destination="@id/nav_itemEdit" />
+        <action
+            android:id="@+id/action_nav_buyitemList_to_nav_itemDetails"
+            app:destination="@id/nav_itemDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_maps"
+        android:name="com.example.lab02_exploits.ui.maps.MapUser"
+        android:label="User location"
+        tools:layout="@layout/fragment_maps" >
+        <action
+            android:id="@+id/action_nav_maps_to_nav_editProfile"
+            app:destination="@id/nav_editProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_map_item"
+        android:name="com.example.lab02_exploits.ui.maps.MapItem"
+        android:label="Item location"
+        tools:layout="@layout/fragment_map_item" >
+        <action
+            android:id="@+id/action_nav_map_item_to_nav_itemEdit"
+            app:destination="@id/nav_itemEdit"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_interestedItemList"
+        android:name="com.example.lab02_exploits.ui.interestedItemList.InterestedItemListFragment"
+        android:label="Liked Items"
+        tools:layout="@layout/interested_item_list_fragment">
+        <action
+            android:id="@+id/action_nav_interestedItemList_to_nav_itemDetails"
+            app:destination="@id/nav_itemDetails" />
+        <action
+            android:id="@+id/action_nav_interestedItemList_to_nav_itemEdit"
+            app:destination="@id/nav_itemEdit" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_boughtItemList"
+        android:name="com.example.lab02_exploits.ui.boughtItemList.BoughtItemListFragment"
+        android:label="Bought Items"
+        tools:layout="@layout/bought_item_list_fragment">
+        <action
+            android:id="@+id/action_nav_boughtItemList_to_reviewDialogFragment"
+            app:destination="@id/reviewDialogFragment" />
+        <action
+            android:id="@+id/action_nav_boughtItemList_to_nav_itemDetails"
+            app:destination="@id/nav_itemDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewDialogFragment"
+        android:name="com.example.lab02_exploits.ui.boughtItemList.ReviewDialogFragment"
+        android:label="Review"
+        tools:layout="@layout/fragment_review_dialog">
+        <action
+            android:id="@+id/action_reviewDialogFragment_to_nav_boughtItemList"
+            app:destination="@id/nav_boughtItemList" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_mapDirections"
+        android:name="com.example.lab02_exploits.ui.maps.MapDirections"
+        android:label="Directions"
+        tools:layout="@layout/fragment_map_directions" >
+        <action
+            android:id="@+id/action_nav_mapDirections_to_nav_itemDetails"
+            app:destination="@id/nav_itemDetails" />
+    </fragment>
+</navigation>

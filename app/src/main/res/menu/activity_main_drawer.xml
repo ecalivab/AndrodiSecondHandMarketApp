@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <!--<item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_slideshow" /> -->
+        <item
+            android:id="@+id/nav_buyitemList"
+            android:icon="@drawable/ic_add_shopping_cart_black_24dp"
+            android:title="@string/on_sale_items"/>
+
+        <item
+            android:id="@+id/nav_boughtItemList"
+            android:icon="@drawable/ic_shopping_cart_black_24dp"
+            android:title="@string/bought_items"/>
+
+        <item
+            android:id="@+id/nav_interestedItemList"
+            android:icon="@drawable/ic_thumb_up_black_24dp"
+            android:title="@string/like_items"/>
+
+
+        <item
+            android:id="@+id/nav_itemList"
+            android:icon="@drawable/ic_list_black_24dp"
+            android:title="@string/my_items"/>
+
+        <item
+            android:id="@+id/nav_showProfile"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="@string/show_profile"/>
+
+        <item
+            android:id="@+id/nav_signInFragment"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="@string/sign_in"/>
+
+    </group>
+</menu>
